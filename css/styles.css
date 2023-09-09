@@ -3,3 +3,181 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    font-size: 16px;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    scroll-behavior: smooth;
+    font-size: 1em;
+}
+
+header,
+main,
+footer,
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.container {
+    width: 92%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+h2 {
+    font-size: 1em;
+}
+
+/******************* HEADER ********************/
+
+.menu-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.hide {
+    display: none;
+}
+
+.heading {
+    width: 100%;
+
+}
+
+.heading .cta {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 20px 0;
+}
+
+nav .container {
+    justify-content: space-between;
+}
+
+.hamburger {
+    width: 20%;
+}
+
+.hamburger i {
+    font-size: 1.75em;
+}
+
+.title {
+    width: 70%;
+}
+
+
+/*************** HERO *****************/
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.hero-image img {
+    width: 100%;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 50px;
+    left: 15px;
+
+}
+
+.hero-overlay a {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 30px;
+    background: #fff;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+/*************** PRODUCTS *****************/
+
+.products {
+    padding: 50px 0;
+}
+
+.products h2 {
+    padding-bottom: 50px;
+}
+
+.products .category {
+    width: 100%;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.category img {
+    width: 100%;
+}
+
+.category a {
+    position: absolute;
+    z-index: 1;
+    bottom: 80px;
+    left: 10px;
+    padding: 15px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #fff;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+/*************** ABOUT US *****************/
+
+.about {
+    width: 100%;
+    padding: 50px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/about.jpg') center, no-repeat;
+    background-size: cover;
+}
+
+.the-story {
+    width: 92%;
+    background: #fff;
+    padding: 30px;
+}
+
+.the-story h2 {
+    text-align: center;
+    font-size: 1.5em;
+    padding-bottom: 50px;
+}
+
+.the-story p {
+    text-align: center;
+}
