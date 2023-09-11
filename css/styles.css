@@ -181,3 +181,43 @@ nav .container {
 .the-story p {
     text-align: center;
 }
+
+/*************** FOOTER *****************/
+
+footer .container {
+    padding: 50px 0;
+}
+
+footer h2 {
+    width: 100%;
+    font-size: 1.5em;
+    padding-bottom: 30px;
+}
+
+footer .footer-links {
+    width: 100%;
+    list-style: none;
+    padding-bottom: 30px;
+}
+
+.footer-links li {
+    color: #000;
+    padding-bottom: 10px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+}
+
+footer .social {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    padding-bottom: 30px;
+}
+
+footer .social a {
+    padding-right: 30px;
+}
