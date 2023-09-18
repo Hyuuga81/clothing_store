@@ -7,7 +7,7 @@ const socials = document.querySelector(".menu-socials");
 
 
 hamburger.addEventListener("click", function() {
-    menuOverlay.style.width = "80%";
+    menuOverlay.style.width = "100%";
     menuOverlay.style.left = "0px";
     paraOverlay.classList.remove("hide");
     listOverlay.classList.remove("hide");

@@ -69,19 +69,34 @@ h2 {
     top: 0;
     left: 0;
     width: 0%;
-    height: 600px;
-    background: #000;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    transition: 0.5s;
+}
+
+.menu-overlay-content {
+    width: 80%;
+    background: #000;
+    height: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    transition: 0.8s;
+}
+
+.menu-overlay-content {
+    padding-top: 100px;
 }
 
 .menu-overlay ul {
     width: 100%;
     list-style: none;
+    margin-bottom: 40px;
 }
 
 .menu-overlay ul li {
@@ -93,12 +108,25 @@ h2 {
     text-transform: uppercase;
 }
 
+.menu-overlay li a {
+    color: #fff;
+    font-size: 1.25em;
+}
+
 .menu-overlay p {
     width: 100%;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 .menu-socials {
     width: 100%;
+}
+
+.menu-socials a {
+    text-decoration: none;
+    color: #fff;
+    padding-right: 20px;
 }
 
 
@@ -143,36 +171,49 @@ nav .container {
     width: 70%;
 }
 
+.title h1 {
+    padding-left: 20px;
+}
+
 
 /*************** HERO *****************/
 
 .hero-image {
-    position: relative;
+    /* position: relative; */
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
+    background: url("../img/hero.jpg") center no-repeat;
+    background-size: cover;
 }
 
-.hero-image img {
+/* .hero-image img {
     width: 100%;
-}
+} */
 
 .hero-overlay {
-    position: absolute;
+    /* position: absolute; */
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row;
     bottom: 50px;
     left: 15px;
-
+    margin: 400px 0 150px 0;
 }
 
 .hero-overlay a {
     text-transform: uppercase;
     text-decoration: none;
+    margin-left: 30px;
     padding: 15px 30px;
     background: #fff;
     border-radius: 10px;
     opacity: 0.8;
+
 }
 
 /*************** PRODUCTS *****************/
@@ -285,6 +326,7 @@ footer .footer-links {
 
 .footer-links li a {
     text-decoration: none;
+    color: #000;
 }
 
 footer .social {
@@ -298,4 +340,44 @@ footer .social {
 
 footer .social a {
     padding-right: 30px;
+    color: #000;
+    font-size: 1.25em;
+}
+
+/*************** TABLET STYLES *****************/
+
+@media (min-width: 768px) {
+    /*************** HEADER *****************/
+
+    .title h1 {
+        padding-left: 100px;
+    }
+
+    /*************** HERO *****************/
+    .hero-image {
+        background: url("../img/hero.jpg") top no-repeat;
+        background-size: cover;
+    }
+
+    .hero-overlay {
+        margin: 550px 0 150px 80px;
+    }
+
+    /*************** PRODUCTS *****************/
+
+    .products .container {
+        justify-content: space-between;
+    }
+
+    .products .category {
+        width: 48%;
+        padding-bottom: 20px;
+    }
+
+    /*************** ABOUT US *****************/
+
+    .the-story {
+        width: 50%;
+    }
+
 }
