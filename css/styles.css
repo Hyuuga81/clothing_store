@@ -52,7 +52,7 @@ h2 {
 .close {
     position: absolute;
     top: 25px;
-    left: 25px;
+    left: 14px;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -61,6 +61,7 @@ h2 {
 
 .close i {
     font-size: 2em;
+    margin-top: 60px;
 }
 
 .menu-overlay {
@@ -80,7 +81,7 @@ h2 {
 }
 
 .menu-overlay-content {
-    width: 80%;
+    width: 100%;
     background: #000;
     height: 700px;
     display: flex;
@@ -144,6 +145,10 @@ h2 {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+}
+
+.cta h2 {
+    font-size: 1em;
 }
 
 nav {
@@ -213,7 +218,6 @@ nav .container {
     background: #fff;
     border-radius: 10px;
     opacity: 0.8;
-
 }
 
 /*************** PRODUCTS *****************/
@@ -272,6 +276,7 @@ nav .container {
 
 .the-story p {
     text-align: center;
+    line-height: 32px;
 }
 
 /*************** TESTIMONIAL *****************/
@@ -313,18 +318,28 @@ footer h2 {
     padding-bottom: 30px;
 }
 
-footer .footer-links {
+footer .link-box {
     width: 100%;
-    list-style: none;
-    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
-.footer-links li {
+footer .footer-links-one,
+footer .footer-links-two {
+    width: 100%;
+    list-style: none;
+}
+
+.footer-links-one li,
+.footer-links-two li {
     color: #000;
     padding-bottom: 10px;
 }
 
-.footer-links li a {
+.footer-links-one li a,
+.footer-links-two li a {
     text-decoration: none;
     color: #000;
 }
@@ -335,7 +350,7 @@ footer .social {
     justify-content: flex-start;
     align-items: center;
     flex-flow: row wrap;
-    padding-bottom: 30px;
+    padding: 30px 0;
 }
 
 footer .social a {
@@ -347,7 +362,19 @@ footer .social a {
 /*************** TABLET STYLES *****************/
 
 @media (min-width: 768px) {
+
+    /******************* OVERLAY ********************/
+    .close {
+        top: 25px;
+        left: 30px;
+    }
+
     /*************** HEADER *****************/
+
+    .menu-overlay-content {
+        width: 50%;
+        height: 900px;
+    }
 
     .title h1 {
         padding-left: 100px;
@@ -360,7 +387,7 @@ footer .social a {
     }
 
     .hero-overlay {
-        margin: 550px 0 150px 80px;
+        margin: 550px 0 150px 3px;
     }
 
     /*************** PRODUCTS *****************/
@@ -378,6 +405,97 @@ footer .social a {
 
     .the-story {
         width: 50%;
+        margin: 100px auto;
+    }
+
+    /*************** TESTIMONIAL *****************/
+    .testimony .container ul {
+        width: 50%;
+    }
+
+    .testimony ul li {
+        margin-bottom: 15px;
+    }
+
+    /*************** FOOTER *****************/
+
+    footer .container {
+        align-items: flex-start;
+    }
+
+    footer .link-box,
+    footer .social {
+        width: 50%;
+        align-items: flex-start;
+    }
+
+    footer .footer-links-one,
+    footer .footer-links-two {
+        width: 50%;
+    }
+
+    footer .social {
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    footer .signature {
+        margin-top: 50px;
+    }
+}
+
+/*************** DESKTOP STYLES *****************/
+@media (min-width: 1440px) {
+    /*************** HEADER *****************/
+
+    .menu-overlay-content {
+        width: 20%;
+        height: 900px;
+    }
+
+    .title h1 {
+        padding-left: 100px;
+    }
+
+    /*************** HERO *****************/
+
+    .hero-overlay {
+        margin: 550px 0 150px 50px;
+    }
+
+    /*************** PRODUCTS *****************/
+
+    .products .container {
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .products .category {
+        width: 30%;
+    }
+
+    /*************** ABOUT US *****************/
+
+    .the-story {
+        width: 40%;
+        margin: 100px auto;
+    }
+
+    /*************** TESTIMONIAL *****************/
+    .testimony .container ul {
+        width: 35%;
+    }
+
+    /*************** FOOTER *****************/
+
+    footer h2 {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    footer .container {
+        width: 70%;
     }
 
 }
