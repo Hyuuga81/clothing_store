@@ -1,23 +1,24 @@
-const hamburger = document.querySelector(".hamburger");
 const menuOverlay = document.querySelector(".menu-overlay");
-const closeMenu = document.querySelector(".fa-xmark");
-const paraOverlay = document.querySelector(".menu-overlay p");
-const listOverlay = document.querySelector(".menu-overlay ul");
-const socials = document.querySelector(".menu-socials");
+const menuContent = document.querySelector('.menu-overlay-content');
+const menuContainer = document.querySelector('.menu-overlay-content .container');
+const hamburger = document.querySelector('.fa-bars');
+const close = document.querySelector('.fa-xmark');
 
-
-hamburger.addEventListener("click", function() {
-    menuOverlay.style.width = "100%";
-    menuOverlay.style.left = "0px";
-    paraOverlay.classList.remove("hide");
-    listOverlay.classList.remove("hide");
-    socials.classList.remove("hide");
+hamburger.addEventListener('click', function() {
+    if (window.screen.width <= 375) {
+        menuContent.style.width = "100%";
+    } else if (window.screen.width >= 375 && window.screen.width < 1200) {
+        menuContent.style.width = "50%";
+    } else if (window.screen.width >= 1200) {
+        menuContent.style.width = "25%";
+    }
+    menuOverlay.classList.remove('hide');
+    menuContainer.classList.remove('hide');
 });
 
-closeMenu.addEventListener("click", function() {
-    menuOverlay.style.width = "0%";
-    menuOverlay.style.left = "-50px";
-    paraOverlay.classList.add("hide");
-    listOverlay.classList.add("hide");
-    socials.classList.add("hide");
+close.addEventListener('click', function() {
+    menuContent.style.width = "0%";
+    menuOverlay.classList.add('hide');
+    menuContainer.classList.add('hide');
 });
+
